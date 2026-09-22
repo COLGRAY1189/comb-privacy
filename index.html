@@ -38,6 +38,7 @@
     font-size: 1.15rem; margin: 2.75rem 0 .75rem; letter-spacing: -.01em;
     padding-top: 1.25rem; border-top: 1px solid var(--rule);
   }
+  h3 { font-size: 1rem; margin: 1.75rem 0 .5rem; letter-spacing: -.005em; }
   .updated { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
   p, li { overflow-wrap: break-word; }
   ul { padding-left: 1.25rem; }
@@ -65,7 +66,7 @@
 <main>
 
 <h1>Privacy Policy for Comb</h1>
-<p class="updated">Last updated: 2 September 2026</p>
+<p class="updated">Last updated: 22 September 2026</p>
 
 <p>Comb is a puzzle game made by <strong>Graydentech</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;). This policy explains what
 happens to information when you play it. It covers the Comb app for Android, package
@@ -76,7 +77,10 @@ your device is to show advertising, and you choose how that works the first time
 
 <h2>1. The short version</h2>
 <ul>
-  <li><strong>We collect nothing about you.</strong> Your progress and settings never leave your phone.</li>
+  <li><strong>Your progress and settings never leave your phone.</strong></li>
+  <li><strong>We do collect anonymous play statistics</strong> &mdash; which levels are started and finished,
+      scores, and how many pieces were placed &mdash; through Google Analytics, so we can tell which
+      levels are too hard. Nothing in it identifies you. Section 2 lists it in full.</li>
   <li><strong>Our advertising partner does collect some information</strong>, listed in full in section 3.</li>
   <li><strong>You choose, on first launch,</strong> whether ads may be personalised. You can change it at any
       time in Settings, and the game is identical either way.</li>
@@ -84,7 +88,8 @@ your device is to show advertising, and you choose how that works the first time
   <li>Comb is not directed at children (see section 8).</li>
 </ul>
 
-<h2>2. What Comb itself stores</h2>
+<h2>2. What Comb itself stores and collects</h2>
+<h3>On your device</h3>
 <p>Two files, both on your device only, both invisible to us:</p>
 <div class="table-wrap">
 <table>
@@ -107,6 +112,59 @@ your device is to show advertising, and you choose how that works the first time
 Comb or clear its data from Android Settings. We cannot read them and we cannot recover them.</p>
 <p>We keep the date of your advertising choice because data-protection law requires us to be able to
 show that a choice was made, and when.</p>
+
+<h3>Play statistics, through Google Analytics</h3>
+<p>Comb uses <strong>Google Analytics for Firebase</strong> to count how the game is played. It is the only
+thing Comb sends anywhere of its own accord, and it exists for one purpose: telling which levels
+people give up on.</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Event</th><th>Sent when</th><th>Contains</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><code>level_start</code></td>
+      <td>a level begins</td>
+      <td>the level number, and whether it is a pack level or an encore level</td>
+    </tr>
+    <tr>
+      <td><code>level_end</code></td>
+      <td>a level is won or lost</td>
+      <td>the level number, pack or encore, whether it was won, and how many pieces were placed</td>
+    </tr>
+    <tr>
+      <td><code>post_score</code></td>
+      <td>a level is won or lost</td>
+      <td>the level number, pack or encore, and the score</td>
+    </tr>
+    <tr>
+      <td><code>ad_impression</code></td>
+      <td>an advertisement is shown</td>
+      <td>which ad network filled it, the format and slot, and what it earned</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>Google Analytics also records, automatically, the kind of information it records for every app
+that uses it: device model, operating system version, language, app version, and an app-instance
+identifier that is generated on your device and is reset if you clear Comb&rsquo;s data or uninstall
+it. It does <strong>not</strong> receive your name, your email address, or anything you type &mdash; Comb has no
+accounts and no text to type.</p>
+<p><strong>Where you are.</strong> Comb itself never asks for your location and has no location permission.
+Google derives approximate location from the IP address your device connects from. <strong>We have
+switched city-level collection off</strong>, so the finest location recorded is your continent, country
+and region &mdash; never your city, and never coordinates. If you are in the EU, the UK or Switzerland,
+Google states that it &ldquo;does not log or store individual IP addresses&rdquo; and that the address is
+&ldquo;used solely for geo-location data derivation before being immediately discarded&rdquo;, with the lookup
+performed on servers in those regions
+(<a href="https://support.google.com/analytics/answer/12017362">support.google.com/analytics/answer/12017362</a>).</p>
+<p><strong>Nothing is collected before you answer the ad choice screen.</strong> Analytics is switched off in the
+app until you have answered it, so a person who opens Comb once and closes it on that screen
+produces no statistics at all. If you choose basic ads, statistics are still collected &mdash; being
+counted is not the same as being profiled &mdash; but Google is told it may not use any of it for
+advertising, ad measurement or ad personalisation.</p>
+<p>Google&rsquo;s handling of this data is described at
+<a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a> and
+<a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
 
 <h2>3. What our advertising partner receives</h2>
 <p>Comb shows ads through <strong>Unity LevelPlay</strong> and <strong>Unity Ads</strong>, which are services of Unity
@@ -166,6 +224,11 @@ of installed apps.</p>
   <li><strong>On your device:</strong> progress, settings and your advertising choice remain until you uninstall
       Comb or clear its data. Both actions delete them immediately and permanently.</li>
   <li><strong>With us:</strong> nothing. We hold no database and no copy of anything.</li>
+  <li><strong>With Google Analytics:</strong> event-level records are kept for <strong>2 months</strong> and the
+      app-instance identifier they are grouped under for <strong>14 months</strong>, after which Google deletes
+      them automatically. Aggregated reports &mdash; the counts we actually look at &mdash; are unaffected.
+      Nothing here is tied to a name or an account; the identifier is created on your device and is
+      destroyed when you uninstall Comb or clear its data.</li>
   <li><strong>With Unity:</strong> their retention periods are set out in their policy, linked in section 3.</li>
 </ul>
 <p>Because there is no account, there is nothing for us to delete on request &mdash; uninstalling the app
