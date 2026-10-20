@@ -66,7 +66,7 @@
 <main>
 <h1>Privacy Policy for Comb</h1>
 
-<p class="updated">Last updated: 19 October 2026</p>
+<p class="updated">Last updated: 20 October 2026</p>
 
 <p>Comb is a puzzle game made by <strong>Graydentech</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;). This policy explains what happens to information when you play it. It covers the Comb app for Android, package <code>com.graydentech.comb</code>.</p>
 
@@ -76,7 +76,7 @@
 
 <ul>
   <li><strong>Your progress and settings never leave your phone.</strong></li>
-  <li><strong>We do collect anonymous play statistics</strong> &mdash; which levels are started and finished, scores, and how many pieces were placed &mdash; through Google Analytics, so we can tell which levels are too hard. Nothing in it identifies you. Section 2 lists it in full.</li>
+  <li><strong>We do collect anonymous play statistics</strong> &mdash; which levels are started and finished, scores, how many pieces were placed, and which screens showed their advertisement &mdash; through Google Analytics, so we can tell which levels are too hard and which screens fail to show ads. Nothing in it identifies you. Section 2 lists it in full.</li>
   <li><strong>Our advertising partner, Google AdMob, does collect some information</strong>, listed in full in section 3.</li>
   <li><strong>If you are in the European Economic Area, the United Kingdom or Switzerland,</strong> Comb asks for your choice about advertising the first time you open it, using Google's consent form. You can change it at any time in Settings. Elsewhere that form is not shown.</li>
   <li><strong>We never sell your personal information.</strong></li>
@@ -98,7 +98,7 @@
 
 <h3>Play statistics, through Google Analytics</h3>
 
-<p>Comb uses <strong>Google Analytics for Firebase</strong> to count how the game is played. It exists for one purpose: telling which levels people give up on.</p>
+<p>Comb uses <strong>Google Analytics for Firebase</strong> to count how the game is played. It exists for two purposes: telling which levels people give up on, and telling which of Comb's screens fail to show their advertisement.</p>
 
 <div class="table-wrap"><table>
 <thead><tr><th>Event</th><th>Sent when</th><th>Contains</th></tr></thead>
@@ -107,6 +107,7 @@
 <tr><td><code>level_end</code></td><td>a level is won or lost</td><td>the level number, pack or encore, whether it was won, and how many pieces were placed</td></tr>
 <tr><td><code>post_score</code></td><td>a level is won or lost</td><td>the level number, pack or encore, and the score</td></tr>
 <tr><td><code>ad_impression</code></td><td>an advertisement is shown</td><td>which ad network filled it, the format, and what it earned. Logged by Google's own SDK, because Comb's AdMob account is linked to its Firebase project</td></tr>
+<tr><td><code>native_ad_request</code>, <code>native_ad_loaded</code>, <code>native_ad_late</code>, <code>native_ad_reused</code>, <code>native_ad_failed</code>, <code>native_ad_shown</code>, <code>native_ad_click</code></td><td>a screen asks for its advertisement, receives it (on time or late), shows one it kept, gets none, shows it, or it is tapped</td><td>the screen's name (for example &ldquo;LevelComplete&rdquo;), and for <code>native_ad_failed</code> Google's error code. Nothing about the advertisement itself</td></tr>
 </tbody></table></div>
 
 <p>Google Analytics also records, automatically, the kind of information it records for every app that uses it: device model, operating system version, language, app version, and an app-instance identifier that is generated on your device and is reset if you clear Comb's data or uninstall it. It does <strong>not</strong> receive your name, your email address, or anything you type &mdash; Comb has no accounts and no text to type.</p>
